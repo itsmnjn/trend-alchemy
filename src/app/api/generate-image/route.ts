@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import { openai } from '@/lib/openai';
 
+// Set timeout to 1 minute (60 seconds)
+export const maxDuration = 60;
+
 export async function POST(req: Request) {
   try {
     const { prompt, trend } = await req.json();
